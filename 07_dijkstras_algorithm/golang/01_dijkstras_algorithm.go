@@ -55,6 +55,8 @@ func main() {
 				costs[node] = new_cost
 				// This node becomes the new parent for this neighbor.
 				parents[node] = node
+			if newCost < costs[node] {
+				costs[node] = newCost
 			}
 		}
 		// Mark the node as processed.
